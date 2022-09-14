@@ -31,7 +31,7 @@ k("n", "<leader>e", ":Lex 30<cr>", opts)
 k("n", "<C-Up>", ":resize +2<CR>", opts)
 k("n", "<C-Down>", ":resize -2<CR>", opts)
 k("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-k("n", "<C-Rigth>", ":vertical resize +2<CR>", opts)
+k("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 k("n", "<S-l>", ":bnext<CR>", opts)
