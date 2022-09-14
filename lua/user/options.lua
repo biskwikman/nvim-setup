@@ -26,6 +26,7 @@ vim.opt.pumheight = 10
 vim.opt.ignorecase = true
 vim.opt.timeoutlen = 1000
 vim.opt.writebackup = false
+vim.opt.termguicolors = true
 
 vim.opt.shortmess:append "c"
 vim.opt.iskeyword:append "-"              --includes hyphens in words
