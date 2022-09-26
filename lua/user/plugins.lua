@@ -29,13 +29,15 @@ if not status_ok then
   return
 end
 
--- Have packer use a popup window
+-- Initialization options
 packer.init {
+-- Have packer use a popup window
   display = {
     open_fn = function()
       return require("packer.util").float { border = "rounded" }
     end,
   },
+  max_jobs = 3,
 }
 
 -- Install plugins here
@@ -44,24 +46,48 @@ return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
-  
+  use "windwp/nvim-autopairs" -- Autopairs
+  use "numToStr/Comment.nvim" -- Easily comment stuff
+  use 'kyazdani42/nvim-web-devicons'
+  use 'kyazdani42/nvim-tree.lua'
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
+
   -- Colorschemes
   use "folke/tokyonight.nvim"
+  use "lunarvim/darkplus.nvim"
 
   -- Completion plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/cmp-path"
-  use "hrsh7th/cmp-cmdline"
-  use "saadparwaiz1/cmp_luasnip"
+  use "hrsh7th/cmp-buffer" -- buffer completions
+  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-cmdline" -- commandline completions
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lua"
 
   -- snippets
   use "L3MON4D3/LuaSnip" -- snippet engine
   use "rafamadriz/friendly-snippets" --a bunch of snippets
 
-  -- LuaSnip
+  -- LSP
   use "neovim/nvim-lspconfig" -- enable nvim-ls
   use "williamboman/nvim-lsp-installer" -- simple language server nvim-lsp-installer
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope-media-files.nvim"
+
+  -- TreeSitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "p00f/nvim-ts-rainbow"
+  use "JoosepAlviste/nvim-ts-context-commentstring"
+
+  -- Git
+  use "lewis6991/gitsigns.nvim"
 
   -- Automatically sets up packer after cloning packer.nvim
   -- Put this after list of plugins
