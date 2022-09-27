@@ -52,6 +52,7 @@ return packer.startup(function(use)
   use 'kyazdani42/nvim-tree.lua'
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
+  use "akinsho/toggleterm.nvim"
 
   -- Colorschemes
   use "folke/tokyonight.nvim"
@@ -73,6 +74,7 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable nvim-ls
   use "williamboman/nvim-lsp-installer" -- simple language server nvim-lsp-installer
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
