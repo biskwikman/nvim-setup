@@ -53,6 +53,7 @@ return packer.startup(function(use)
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use "akinsho/toggleterm.nvim"
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- Colorschemes
   use "folke/tokyonight.nvim"
