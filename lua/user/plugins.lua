@@ -54,7 +54,7 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use "akinsho/toggleterm.nvim"
   use "lukas-reineke/indent-blankline.nvim"
-
+  use "simrat39/rust-tools.nvim"
   -- Colorschemes
   use "folke/tokyonight.nvim"
   use "lunarvim/darkplus.nvim"
