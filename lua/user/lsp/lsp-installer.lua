@@ -61,6 +61,11 @@ for _, server in pairs(servers) do
 
     require("rust-tools").setup {
       tools = {
+        autoSetHints = true,
+        hoverWithActions = true,
+        inlayHints = {
+          show_parameter_hints = true,
+        },
         on_initialized = function()
           vim.cmd [[
             autocmd BufEnter,CursorHold,InsertLeave,BufWritePost *.rs silent! lua vim.lsp.codelens.refresh()
@@ -74,6 +79,12 @@ for _, server in pairs(servers) do
           ["rust-analyzer"] = {
             lens = {
               enable = true,
+              references = {
+                adt = { enable = true },
+                enumVariant = { enable = true },
+                method = { enable = true },
+                trait = { enable = true },
+              },
             },
             checkOnSave = {
               command = "clippy",
