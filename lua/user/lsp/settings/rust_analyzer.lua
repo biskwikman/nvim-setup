@@ -53,7 +53,13 @@ return {
         or util.find_git_ancestor(fname)
     end,
     settings = {
-      ['rust-analyzer'] = {},
+      ['rust-analyzer'] = {
+        diagnostics = {
+          experimental = {
+            enable = true
+          }
+        }
+      },
     },
   },
   commands = {

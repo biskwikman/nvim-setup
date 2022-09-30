@@ -54,7 +54,7 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use "akinsho/toggleterm.nvim"
   use "lukas-reineke/indent-blankline.nvim"
-
+  use "simrat39/rust-tools.nvim"
   -- Colorschemes
   use "folke/tokyonight.nvim"
   use "lunarvim/darkplus.nvim"
@@ -65,11 +65,13 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- commandline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  --[[ use "hrsh7th/cmp-vsnip" ]]
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
 
   -- snippets
   use "L3MON4D3/LuaSnip" -- snippet engine
+  --[[ use "hrsh7th/vim-vsnip" ]]
   use "rafamadriz/friendly-snippets" --a bunch of snippets
 
   -- LSP

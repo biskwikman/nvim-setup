@@ -17,7 +17,7 @@ vim.opt.updatetime = 300                  --faster completion
 vim.opt.showtabline = 2                   --always show tabs
 vim.opt.signcolumn = "yes"                --show sign column
 vim.opt.guifont = "monospace:h17"         --font
-vim.opt.completeopt = { 
+vim.opt.completeopt = {
   "menuone", "noselect"
 }
 vim.opt.smartcase = true
